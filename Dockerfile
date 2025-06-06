@@ -14,7 +14,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Sao chép file JAR từ thư mục gym/gym/target
-COPY gym/gym/target/gym-0.0.1-SNAPSHOT.jar app.jar
+COPY F:/miniapp/backend/gym/gym/target/gym-0.0.1-SNAPSHOT.jar app.jar
 
 # Cổng mặc định của Spring Boot
 EXPOSE 8080
