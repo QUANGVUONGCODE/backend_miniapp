@@ -1,3 +1,12 @@
+FROM maven:3.8.6-openjdk-21-slim AS build
+WORKDIR /app
+# Sao chép file pom.xml và các file cần thiết để xây dựng ứng dụng
+COPY . .
+RUN mvn clean package -DskipTests
+
+
+
+
 # Sử dụng image OpenJDK 17 (phù hợp với Spring Boot)
 FROM openjdk:21-jdk-slim
 
